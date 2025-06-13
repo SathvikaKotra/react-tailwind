@@ -1,16 +1,18 @@
-import React from 'react'
+import Player from "./components/Player.jsx";
+import TimerChallenge from "./components/TimerChallenge.jsx";
 
-const App = () => {
+function App() {
   return (
-    <div className='h-50 w-3/4 bg-amber-500 m-auto rounded-2xl mt-10 flex items-center  justify-center font-bold text-2xl text-orange-700'>
-      <nav className='space-y-4 flex flex-col'>
-        <a href='#'>Pinky</a>
-        <a href='#'>Pooky</a>
-        <a href='#'>Pulky</a>
-        <a href='#'>Pukky</a>
-      </nav>
-    </div>
-  )
+    <>
+      <Player />
+      <div id="challenges">
+        <TimerChallenge title="Easy" targetTime={1} />
+        <TimerChallenge title=" Not Easy" targetTime={5} />
+        <TimerChallenge title=" Getting Tough" targetTime={10} />
+        <TimerChallenge title=" Pros Only" targetTime={15} />
+      </div>
+    </>
+  );
 }
 
-export default App
+export default App;
